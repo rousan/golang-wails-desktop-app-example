@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import './index.css';
+import styles from './index.module.css';
 
-function AboutPage() {
+function About() {
   useEffect(() => {
     console.log("About is mounted");
     return () => {
@@ -10,13 +10,14 @@ function AboutPage() {
     };
   }, []);
 
-
   return (
-    <div className="about">
-      About
+    <div className={styles.about}>
+      <div className={styles.label}>
+        About
+      </div>
       <Link to="/">Home</Link>
     </div>
   );
 }
 
-export default AboutPage;
+export default About;

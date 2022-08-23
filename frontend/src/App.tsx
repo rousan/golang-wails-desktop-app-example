@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import AboutPage from './pages/About';
-import HomePage from './pages/Home';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   useEffect(() => {
@@ -13,8 +13,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 }

@@ -7,5 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     eslint({ fix: true })
-  ]
+  ],
+  css: {
+    modules: {
+      localsConvention: "camelCase"
+    }
+  }
 });

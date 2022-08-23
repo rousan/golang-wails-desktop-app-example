@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import './index.css';
 import { Link } from 'react-router-dom';
+import styles from './index.module.css';
 
-function HomePage() {
+function Home() {
   useEffect(() => {
     console.log("Home is mounted");
     return () => {
@@ -11,11 +11,13 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="home">
-      Home
+    <div className={styles.home}>
+      <div className={styles.label}>
+        Home
+      </div>
       <Link to="/about">About</Link>
     </div>
   );
 }
 
-export default HomePage;
+export default Home;
