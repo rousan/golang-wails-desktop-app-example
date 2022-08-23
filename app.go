@@ -2,26 +2,25 @@ package main
 
 import (
 	"context"
-	"fmt"
 )
 
-// App struct
-type App struct {
-	ctx context.Context
+type app struct {
+	ctx   context.Context
+	binds *binds
 }
 
-// NewApp creates a new App application struct
-func NewApp() *App {
-	return &App{}
+func newApp() *app {
+	return &app{
+		ctx:   nil,
+		binds: newBinds(),
+	}
 }
 
-// startup is called when the app starts. The context is saved
-// so we can call the runtime methods
-func (a *App) startup(ctx context.Context) {
+func (a *app) setContext(ctx context.Context) {
 	a.ctx = ctx
+	a.binds.setContext(ctx)
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
+func (a *app) startup(ctx context.Context) {
+	a.setContext(ctx)
 }
