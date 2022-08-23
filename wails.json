@@ -1,0 +1,12 @@
+{
+  "name": "golang-wails-desktop-app-example",
+  "outputfilename": "golang-wails-desktop-app-example",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "Rousan Ali",
+    "email": "rousanali786@gmail.com"
+  }
+}
