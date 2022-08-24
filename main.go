@@ -15,7 +15,7 @@ func main() {
 	app := newApp()
 
 	err := wails.Run(&options.App{
-		Title:            "Downloader",
+		Title:            "golang-wails-desktop-app-example",
 		Width:            1024,
 		Height:           768,
 		Assets:           assets,
