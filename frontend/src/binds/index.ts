@@ -1,5 +1,5 @@
-import { Sum } from '../../wailsjs/go/main/binds';
+import { RequestDownloadURL } from '../../wailsjs/go/main/binds';
 
-export async function sum(a: number, b: number): Promise<number> {
-  return Sum(a, b);
+export async function requestDownloadURL(url: string): Promise<string> {
+  return RequestDownloadURL(url);
 }

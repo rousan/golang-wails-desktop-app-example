@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from './index.module.css';
 
-function About() {
+export default function About() {
   useEffect(() => {
     console.log("About is mounted");
     return () => {
@@ -19,5 +19,3 @@ function About() {
     </div>
   );
 }
-
-export default About;

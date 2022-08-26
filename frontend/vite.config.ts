@@ -11,6 +11,12 @@ export default defineConfig({
   css: {
     modules: {
       localsConvention: "camelCase"
-    }
+    },
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        additionalData: '@root-entry-name: default;',
+      },
+    },
   }
 });
